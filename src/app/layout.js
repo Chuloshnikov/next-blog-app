@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <ThemeContextProvider>
         <ThemeProvider>
           <div
-          className='max-w-container mx-auto xs:px-[40px] xl:px-[80px] xs:max-w-[500px] lgl:max-w-[768x] xl:max-w-[1024px] 2xl:max-w-[1366px]'
+          className='max-w-container mx-auto xs:px-[20px] xl:px-[80px] xs:max-w-[500px] mdl:max-w-[667px] lg:max-w-[768px] lgl:max-w-[960px] xl:max-w-[1260px] 2xl:max-w-[1366px]'
           >
             <Navbar/>
             {children}
