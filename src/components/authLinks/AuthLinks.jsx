@@ -35,7 +35,7 @@ const AuthLinks = () => {
     {open && (
       <div
       className={`absolute left-0 top-[100px] h-screen w-full 
-      ${theme === "dark" ? 'bg-[#ddd]' : 'bg-black'}
+      ${theme === "dark" ? 'bg-[#0f172a]' : 'bg-white'}
       flex flex-col items-center justify-center gap-10 text-4xl`}
       >
         <Link href="/">Homepage</Link>
