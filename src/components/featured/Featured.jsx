@@ -4,11 +4,11 @@ import Image from "next/image";
 const Featured = () => {
   return (
     <div className={'mt-[30px]'}>
-      <h1 className={'text-8xl'}>
+      <h1 className={'xs:text-4xl mdl:text-5xl lgl:text-6xl xl:text-7xl 2xl:text-8xl'}>
         <b>Hey, United Farmers is here!</b> Discover our stories and creative ideas.
       </h1>
       <div className={'mt-[60px] flex items-center gap-[50px]'}>
-        <div className={'flex-1 h-[500px] relative'}>
+        <div className={'flex-1 h-[500px] relative xs:hidden lgl:flex'}>
           <Image src="/p1.jpeg" alt="postImg" fill className='object-cover'/>
         </div>
         <div className={'flex-1 flex flex-col gap-6'}>
