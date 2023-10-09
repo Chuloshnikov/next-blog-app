@@ -6,7 +6,7 @@ import Card from '../card/Card';
 const CardList = () => {
   return (
     <div
-    className='flex-5'
+    className='xs:w-full lgl:basis-2/3'
     >
       <h1
       className='containerTitle'
