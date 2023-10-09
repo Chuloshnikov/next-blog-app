@@ -2,7 +2,11 @@ import React from 'react';
 
 const Menu = () => {
   return (
-    <div>Menu</div>
+    <div
+    className='flex-[1/3]'
+    >
+      Menu
+    </div>
   )
 }
 
