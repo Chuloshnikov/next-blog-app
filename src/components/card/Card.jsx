@@ -8,7 +8,7 @@ const Card = () => {
     className='post mb-[50px] flex gap-[50px] items-center'
     >
         <div
-        className='imagecontainer flex-1 h-[350px] relative'
+        className='imagecontainer flex-1 h-[300px] relative'
         >
             <Image 
             className='object-cover'
@@ -17,7 +17,7 @@ const Card = () => {
             fill/>
         </div>
         <div
-        className='textcontainer flex-1 flex flex-col gap-[30px]'
+        className='textcontainer flex-1 flex flex-col gap-[10px]'
         >
             <div
             className='detail'
@@ -37,13 +37,13 @@ const Card = () => {
             href="/"
             >
                 <h3
-                className='containerTitle'
+                className='font-bold text-2xl'
                 >
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 </h3>
             </Link>
             <p
-            className='text-lg font-light text-softTextColor'
+            className='text-base font-light text-softTextColor'
             >
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
                 Sapiente, maiores ratione nam quod dolorem aspernatur consequuntur 
@@ -51,7 +51,7 @@ const Card = () => {
                 Recusandae aut quasi eum necessitatibus inventore.
             </p>
             <Link
-            className='border-b-[1px] border-red-500 max-w-max p-[2px]'
+            className='border-b-[1px] border-red-500 max-w-max p-[1px]'
             href="/"
             >
                 Read more
