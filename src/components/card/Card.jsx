@@ -8,7 +8,7 @@ const Card = () => {
     className='post mb-[50px] flex gap-[50px] items-center'
     >
         <div
-        className='imagecontainer flex-1 h-[300px] relative'
+        className='imagecontainer xs:hidden xl:block flex-1 h-[300px] relative'
         >
             <Image 
             className='object-cover'
