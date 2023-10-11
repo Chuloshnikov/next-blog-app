@@ -34,3 +34,25 @@ a {
   .containerTitle {
     @apply font-bold text-4xl my-[50px]
 }
+
+
+input, textarea, select {
+  @apply border border-gray-500 px-1 hover:border-gray-900;
+  @apply mb-2 resize-none;
+}
+
+input:focus {
+  @apply border-none outline-none
+}
+
+.ql-container {
+  font-size: 28px !important;
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before {
+  color: #b3b3b1;
+}
+
+.quill > input::placeholder {
+  color: #b3b3b1;
+}
