@@ -1,6 +1,19 @@
-import React from 'react';
+"use client"
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const LoginPage = () => {
+
+    const {data, status} = useSession();
+
+    const router = useRouter();
+
+    if (status === "loading") {
+        return <div>Loading...</div>
+    }
+    if (status === "authenticated") {
+        router.push("/");
+    }
   return (
     <div
     className='flex items-center justify-center mt-[60px]'
@@ -10,6 +23,7 @@ const LoginPage = () => {
         flex flex-col gap-[50px] rounded-[10px] xs:text-md sml:text-lg'
         >
             <div 
+            onClick={() => signIn("google")}
             className='p-5 flex justify-center items-center rounded-[5px] border-none text-white font-bold cursor-pointer bg-orange-500'
             >
                 Sign in with Google

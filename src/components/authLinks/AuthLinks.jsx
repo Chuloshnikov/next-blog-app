@@ -4,23 +4,24 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { useContext } from 'react';
 import { ThemeContext } from "@/context/ThemeContext";
+import { signOut, useSession } from 'next-auth/react';
 
 const AuthLinks = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  const { status } = useSession();
   const {theme} = useContext(ThemeContext);
 
-  //temporary
-  const status = "notauthenticated"
+  
   return (
     <div
     className='flex gap-3 xl:gap-4 items-center'
     >
-      {status === "notauthenticated" ? (
+      {status === "unauthenticated" ? (
       <Link href="/login">Login</Link>
     ) : (
       <>
-        <Link href="/write">Write</Link>
-        <span>Logout</span>
+        <Link className='cursor-pointer' href="/write">Write</Link>
+        <span className='cursor-pointer' onClick={signOut}>Logout</span>
       </>
     )}
     {/*burger*/}
@@ -45,8 +46,8 @@ const AuthLinks = () => {
           <Link href="/login">Login</Link>
           ) : (
             <>
-              <Link href="/write">Write</Link>
-              <span>Logout</span>
+              <Link className='cursor-pointer' href="/write">Write</Link>
+              <span className='cursor-pointer' onClick={signOut}>Logout</span>
             </>
         )}
       </div>

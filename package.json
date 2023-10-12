@@ -13,6 +13,7 @@
     "eslint-config-next": "13.4.19",
     "flowbite": "^1.8.1",
     "next": "13.4.19",
+    "next-auth": "^4.23.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-quill": "^2.0.0"
