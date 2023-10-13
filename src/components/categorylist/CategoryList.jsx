@@ -2,7 +2,43 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const CategoryList = () => {
+
+const getData = async () => {
+  const res = await fetch("http://localhost:3000/api/categories", {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed");
+  }
+
+  return res.json();
+};
+
+const iconStyle = (slug) => {
+    let style;
+  if (slug === "fashion") {
+    style = "bg-purple-400"
+  } else if (slug === "culture") {
+    style = "bg-yellow-400"
+  } else if (slug === "coding") {
+    style = "bg-blue-400"
+  } else if (slug === "food") {
+    style = "bg-red-400"
+  } else if (slug === "travel") {
+    style = "bg-orange-300"
+  } else if (slug === "style") {
+    style = "bg-green-300"
+  } else {
+    style = "bg-grey-400"
+  }
+  return style;
+}
+
+const CategoryList = async () => {
+
+  const data = await getData();
+
   return (
     <div
     >
@@ -14,81 +50,39 @@ const CategoryList = () => {
         <div
         className='flex flex-wrap justify-between gap-6'
         >
-            <Link
-            href="/blog?cat=style"
-            className={'flex items-center gap-[10px] capitalize xs:w-full mdl:w-[45%] lgl:w-[20%] xl:w-[15%] h-[80px] justify-center rounded-[10px] bg-yellow-300'}
-            >
-                <Image 
-                src="/style.png" 
-                className='w-[32px] h-[32px] rounded-full'
-                width={32}
-                height={32}
-                />
-              <span>style</span>
-            </Link>
-            <Link
-            href="/blog?cat=style"
-            className={'flex items-center gap-[10px] capitalize xs:w-full mdl:w-[45%] lgl:w-[20%] xl:w-[15%] h-[80px] justify-center rounded-[10px] bg-yellow-300'}
-            >
-                <Image 
-                src="/style.png" 
-                className='w-[32px] h-[32px] rounded-full'
-                width={32}
-                height={32}
-                />
-              <span>style</span>
-            </Link>
-            <Link
-            href="/blog?cat=style"
-            className={'flex items-center gap-[10px] capitalize xs:w-full mdl:w-[45%] lgl:w-[20%] xl:w-[15%] h-[80px] justify-center rounded-[10px] bg-yellow-300'}
-            >
-                <Image 
-                src="/style.png" 
-                className='w-[32px] h-[32px] rounded-full'
-                width={32}
-                height={32}
-                />
-              <span>style</span>
-            </Link>
-            <Link
-            href="/blog?cat=style"
-            className={'flex items-center gap-[10px] capitalize xs:w-full mdl:w-[45%] lgl:w-[20%] xl:w-[15%] h-[80px] justify-center rounded-[10px] bg-yellow-300'}
-            >
-                <Image 
-                src="/style.png" 
-                className='w-[32px] h-[32px] rounded-full'
-                width={32}
-                height={32}
-                />
-              <span>style</span>
-            </Link>
-            <Link
-            href="/blog?cat=style"
-            className={'flex items-center gap-[10px] capitalize xs:w-full mdl:w-[45%] lgl:w-[20%] xl:w-[15%] h-[80px] justify-center rounded-[10px] bg-yellow-300'}
-            >
-                <Image 
-                src="/style.png" 
-                className='w-[32px] h-[32px] rounded-full'
-                width={32}
-                height={32}
-                />
-              <span>style</span>
-            </Link>
-            <Link
-            href="/blog?cat=style"
-            className={'flex items-center gap-[10px] capitalize xs:w-full mdl:w-[45%] lgl:w-[20%] xl:w-[15%] h-[80px] justify-center rounded-[10px] bg-yellow-300'}
-            >
-                <Image 
-                src="/style.png" 
-                className='w-[32px] h-[32px] rounded-full'
-                width={32}
-                height={32}
-                />
-              <span>style</span>
-            </Link>
+          {
+            data?.map((item) => (
+              <Link
+              href="/blog?cat=style"
+              className={`flex items-center gap-[10px] capitalize xs:w-full mdl:w-[45%] lgl:w-[20%] xl:w-[15%] h-[80px] justify-center rounded-[10px] 
+              ${iconStyle(item.slug)}`}
+              key={item._id}
+              >
+                  {item.img && (<Image 
+                  src={item.img}
+                  className='w-[32px] h-[32px] rounded-full'
+                  width={32}
+                  height={32}
+                  />)
+                  }
+              <span>{item.title}</span>
+              </Link>
+            ))
+          }
         </div>
     </div>
   )
 }
 
 export default CategoryList;
+
+
+export const getServerSideProps = async () => {
+  const data = await getData();
+
+  return {
+    props: {
+      data
+    }
+  }
+}

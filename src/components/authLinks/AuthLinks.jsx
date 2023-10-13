@@ -17,7 +17,7 @@ const AuthLinks = () => {
     className='flex gap-3 xl:gap-4 items-center'
     >
       {status === "unauthenticated" ? (
-      <Link href="/login">Login</Link>
+      <Link className='cursor-pointer' href="/login">Login</Link>
     ) : (
       <>
         <Link className='cursor-pointer' href="/write">Write</Link>
@@ -39,11 +39,11 @@ const AuthLinks = () => {
       ${theme === "dark" ? 'bg-[#0f172a]' : 'bg-white'}
       flex flex-col items-center justify-center gap-10 text-4xl`}
       >
-        <Link href="/">Homepage</Link>
-        <Link href="/">About</Link>
-        <Link href="/">Contact</Link>
+        <Link className='cursor-pointer' href="/">Homepage</Link>
+        <Link className='cursor-pointer' href="/">About</Link>
+        <Link className='cursor-pointer' href="/">Contact</Link>
         {status === "notauthenticated" ? (
-          <Link href="/login">Login</Link>
+          <Link className='cursor-pointer' href="/login">Login</Link>
           ) : (
             <>
               <Link className='cursor-pointer' href="/write">Write</Link>
