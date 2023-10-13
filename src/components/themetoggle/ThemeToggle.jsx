@@ -16,7 +16,7 @@ const themeToggle = () => {
       <Image src="/moon.png" alt="togglemoon" width={14} height={14}/>
       <div
       onClick={toggle}
-      className={`w-[15px] h-[15px] rounded-full absolute ${theme === "dark" ? 'left-[1px] bg-[#0f172a]' : 'right-[1px] bg-white'}`}
+      className={`w-[15px] h-[15px] rounded-full absolute ${theme === "dark" ? 'left-[1px] bg-[#0f172a] cursor-pointer' : 'right-[1px] bg-white cursor-pointer'}`}
       ></div>
       <Image src="/sun.png" alt="togglesun" width={14} height={14}/>
     </div>

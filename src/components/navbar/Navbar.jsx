@@ -12,23 +12,25 @@ const Navbar = () => {
         <div
         className='xs:hidden lgl:flex gap-2 flex-1'
         >
-            <Image src="/facebook.png" alt="facebook" width={24} height={24}/>
-            <Image src="/instagram.png" alt="instagram" width={24} height={24}/>
-            <Image src="/tiktok.png" alt="tictok" width={24} height={24}/>
-            <Image src="/youtube.png" alt="youtube" width={24} height={24}/>
+            <Image className='cursor-pointer' src="/facebook.png" alt="facebook" width={24} height={24}/>
+            <Image className='cursor-pointer' src="/instagram.png" alt="instagram" width={24} height={24}/>
+            <Image className='cursor-pointer' src="/tiktok.png" alt="tictok" width={24} height={24}/>
+            <Image className='cursor-pointer' src="/youtube.png" alt="youtube" width={24} height={24}/>
         </div>
         <div
         className='xs:text-2xl lgl:text-4xl font-bold flex-1 xs:text-left lgl:text-center '
         >
-          farmerblog
+          <Link href="/">
+              farmerblog
+          </Link>
         </div>
         <ul
         className='flex gap-3 xl:gap-4 flex-1 xs:text-lg lgl:text-xl items-center xs:justify-end'
         >
           <li><Link href="/"/><ThemeToggle/></li>
-          <li className='xs:hidden lgl:flex'><Link href="/"/>Homepage</li>
-          <li className='xs:hidden lgl:flex'><Link href="/"/>Contact</li>
-          <li className='xs:hidden lgl:flex'><Link href="/"/>About</li>
+          <li className='xs:hidden lgl:flex cursor-pointer'><Link href="/"/>Homepage</li>
+          <li className='xs:hidden lgl:flex cursor-pointer'><Link href="/"/>Contact</li>
+          <li className='xs:hidden lgl:flex cursor-pointer'><Link href="/"/>About</li>
           <li><Link href="/"/><AuthLinks/></li>
         </ul>
     </div>
