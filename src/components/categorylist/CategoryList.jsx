@@ -65,7 +65,7 @@ const CategoryList = async () => {
                   height={32}
                   />)
                   }
-              <span>{item.title}</span>
+              <span className='text-white font-semibold'>{item.title}</span>
               </Link>
             ))
           }
@@ -74,15 +74,7 @@ const CategoryList = async () => {
   )
 }
 
+
+
 export default CategoryList;
 
-
-export const getServerSideProps = async () => {
-  const data = await getData();
-
-  return {
-    props: {
-      data
-    }
-  }
-}
