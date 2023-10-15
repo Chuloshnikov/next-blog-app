@@ -20,6 +20,7 @@ const MenuPosts = ({withImage}) => {
             className='image rounded-full border-[3px] border-gray-400 object-cover'
             src="/p1.jpeg" 
             alt="postImg" 
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             fill
             />
           </div>

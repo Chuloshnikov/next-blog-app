@@ -9,7 +9,13 @@ const Featured = () => {
       </h1>
       <div className={'mt-[60px] flex items-center gap-[50px]'}>
         <div className={'flex-1 h-[500px] relative xs:hidden lgl:flex'}>
-          <Image src="/p1.jpeg" alt="postImg" fill className='object-cover'/>
+          <Image 
+          src="/p1.jpeg" 
+          alt="postImg" 
+          fill 
+          className='object-cover'
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
         <div className={'flex-1 flex flex-col gap-6'}>
             <h1 className={'text-4xl'}>
