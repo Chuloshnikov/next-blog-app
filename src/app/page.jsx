@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Featured from "@/components/featured/Featured";
 import CategoryList from "@/components/categorylist/CategoryList";
 import CardList from "@/components/cardlist/CardList";
@@ -8,8 +7,9 @@ export default function Home({ searchParams }) {
 
   const page = parseInt(searchParams.page) || 1;
 
+
   return (
-    <div className={''}>
+    <div>
     <Featured />
     <CategoryList/>
     <div
