@@ -8,17 +8,19 @@ const Card = ({ key, item }) => {
     key={key}
     className='post mb-[50px] flex gap-[50px] items-center'
     >
-        <div
-        className='imagecontainer xs:hidden xl:block flex-1 h-[300px] relative'
-        >
-            <Image 
-            className='object-cover'
-            src='/p1.jpeg' 
-            alt="postImg" 
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-        </div>
+        {item.img && (
+            <div
+            className='imagecontainer xs:hidden xl:block flex-1 h-[300px] relative'
+            >
+                <Image 
+                className='object-cover'
+                src='/p1.jpeg' 
+                alt="postImg" 
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+            </div>
+            )}
         <div
         className='textcontainer flex-1 flex flex-col gap-[10px]'
         >
