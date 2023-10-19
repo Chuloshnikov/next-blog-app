@@ -14,7 +14,7 @@ const Card = ({ key, item }) => {
             >
                 <Image 
                 className='object-cover'
-                src='/p1.jpeg' 
+                src={item.img} 
                 alt="postImg" 
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -30,16 +30,16 @@ const Card = ({ key, item }) => {
                 <span
                 className='text-softTextColor'
                 >
-                    11/02/2033 -{" "}
+                    {item.createdAt.substring(0, 10)} -{" "}
                 </span>
                 <span
                 className='text-red-400'
                 >
-                    CULTURE
+                    {item.catSlug}
                 </span>
             </div>
             <Link
-            href="/"
+            href={`/posts/${item.slug}`}
             >
                 <h3
                 className='font-bold text-2xl'
@@ -50,14 +50,11 @@ const Card = ({ key, item }) => {
             <p
             className='text-base font-light text-softTextColor'
             >
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Sapiente, maiores ratione nam quod dolorem aspernatur consequuntur 
-                doloribus earum voluptatem deserunt pariatur ipsa, magni nisi. 
-                Recusandae aut quasi eum necessitatibus inventore.
+               {item.desc.substring(0, 60)}
             </p>
             <Link
             className='border-b-[1px] border-red-500 max-w-max p-[1px]'
-            href="/"
+            href={`/posts/${item.slug}`}
             >
                 Read more
             </Link>
