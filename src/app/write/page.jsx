@@ -107,7 +107,7 @@ const WritePage = () => {
         />
          <select 
         onChange={(e) => setCatSlug(e.target.value)}
-        className='mb-[50px] py-[10px] px-[20px] ml-[50px] max-w-max text-softTextColor'
+        className='mb-[50px] py-[10px] px-[20px] ml-[50px] max-w-max text-softTextColor bg-transparent'
         >
         <option value="style">style</option>
         <option value="fashion">fashion</option>
@@ -127,13 +127,13 @@ const WritePage = () => {
             </button>
             {open && (
                 <div
-                className='add flex gap-5 bg-mainBg absolute z-100 w-full left-[50px] z-10'
+                className='add flex gap-5 bg-transparent absolute z-100 w-full left-[50px] z-10'
                 >
                     <input type="file" id="image" onChange={e => setFile(e.target.files[0])}
                     style={{ display: "none"}}
                     />
                     <button
-                        className='button w-[36px] h-[36px] rounded-full bg-transparent border-[1px] flex items-center justify-center cursor-pointer border-[#1a8917]'
+                        className='button w-[36px] h-[36px] rounded-full  border-[1px] flex items-center justify-center cursor-pointer border-[#1a8917]'
                         >
                     <label
                     htmlFor='image'
