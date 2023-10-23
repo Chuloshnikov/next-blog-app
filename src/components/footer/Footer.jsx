@@ -13,10 +13,9 @@ const Footer = () => {
        
         <div>
         <div
-        className='text-2xl flex items-center'
+        className='text-2xl font-bold'
         >
-          <Image src="/logo.png" alt="logoImg" width={50} height={50}/>
-          <h3>maxterblog</h3>
+          <h3>Ma<span className='text-blue-400'>X</span>ter</h3>
         </div>
           <p
           className='font-light'
