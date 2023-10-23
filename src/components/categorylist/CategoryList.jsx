@@ -63,6 +63,7 @@ const CategoryList = async () => {
                   className='w-[32px] h-[32px] rounded-full'
                   width={32}
                   height={32}
+                  alt="categoryImg"
                   />)
                   }
               <span className='text-white font-semibold'>{item.title}</span>
