@@ -2,12 +2,12 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { useContext } from 'react';
+import { UseContext } from 'react';
 import { ThemeContext } from "@/context/ThemeContext";
 
 const themeToggle = () => {
 
-  const {toggle, theme} = useContext(ThemeContext);
+  const {toggle, theme} = UseContext(ThemeContext);
 
   return (
     <div

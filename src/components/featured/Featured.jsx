@@ -20,10 +20,10 @@ const Featured = () => {
         </div>
         <div className={'flex-1 flex flex-col gap-6'}>
             <h1 className={'text-4xl'}>
-                Unearthing the Stories of Agriculture: The Impact of a Farmer's Blog.
+                Unearthing the Stories of Agriculture: The Impact of a Maxter Blog.
             </h1>
           <p className={'text-xl text-softTextColor font-light'}>
-          A farmer's blog offers a firsthand insight into the day-to-day challenges and rewards of working on a farm.
+          A Maxter blog offers a firsthand insight into the day-to-day challenges and rewards of working on a farm.
         Through the farm blog, readers can learn about sustainable agricultural practices and innovative farming techniques.
         Documenting seasonal changes, the blogger captures the beauty and transformation of nature, giving urban readers a connection to the countryside.
           </p>
