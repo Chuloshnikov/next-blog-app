@@ -16,7 +16,7 @@ const Footer = () => {
         className='text-2xl flex items-center'
         >
           <Image src="/logo.png" alt="logoImg" width={50} height={50}/>
-          <h3>Farmerblog</h3>
+          <h3>maxterblog</h3>
         </div>
           <p
           className='font-light'

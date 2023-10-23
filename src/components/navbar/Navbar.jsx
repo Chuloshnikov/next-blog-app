@@ -21,7 +21,7 @@ const Navbar = () => {
         className='xs:text-2xl lgl:text-4xl font-bold flex-1 xs:text-left lgl:text-center '
         >
           <Link href="/">
-              farmerblog
+              maxterblog
           </Link>
         </div>
         <ul
